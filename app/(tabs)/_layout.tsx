@@ -1,4 +1,3 @@
-// Tried to finish this as fast as possible. Code may be messy for that
 import { Stack } from "expo-router";
 import React from "react";
 
