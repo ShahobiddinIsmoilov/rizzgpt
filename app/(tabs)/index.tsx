@@ -7,7 +7,7 @@ import RizzFontPink from "../../assets/fonts/rizzfont_pink.png";
 export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.navigate("/plans");
+      router.replace("/plans");
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
