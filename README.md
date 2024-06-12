@@ -1,1 +1,1 @@
-Become the Rizzer of Rizzers
+Get dates. Get girls. Become the Rizzer of Rizzers
