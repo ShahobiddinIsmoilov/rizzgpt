@@ -1,5 +1,5 @@
 // Upload Screenshot Page
-import { Image, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Link, router } from "expo-router";
 import React from "react";
@@ -10,11 +10,11 @@ import Screen3 from "../../assets/rizzgpt/screen3.png";
 
 const Upload = () => {
   return (
-    <View>
+    <ScrollView>
       <LinearGradient
         colors={["#e62079", "#000000"]}
         start={{ x: 0, y: 0 }}
-        end={{ x: 0, y: 1 }}
+        end={{ x: 0, y: 0.6 }}
         className="h-[calc(50%)]"
       >
         <View className="mt-24">
@@ -53,7 +53,7 @@ const Upload = () => {
           </Link>
         </View>
       </LinearGradient>
-    </View>
+    </ScrollView>
   );
 };
 

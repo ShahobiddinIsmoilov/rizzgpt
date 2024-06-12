@@ -1,5 +1,5 @@
 // Unlock Free Trial Page
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Elevate from "../../assets/fonts/elevate.png";
@@ -9,7 +9,7 @@ import React from "react";
 
 const Plans = () => {
   return (
-    <View>
+    <ScrollView>
       <View className="mx-6 mt-20">
         <GoBack width={30} height={30} />
         <View className="mx-4 mt-8 flex items-center -translate-y-28">
@@ -43,7 +43,7 @@ const Plans = () => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
