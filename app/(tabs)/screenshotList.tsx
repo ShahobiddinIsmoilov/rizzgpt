@@ -1,12 +1,12 @@
-// Screenshots List Page
-import { FlatList, ScrollView, Text, View, Image } from "react-native";
+// Screenshots List Screen
+import { FlatList, ScrollView, Text, View, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Link } from "expo-router";
-import RizzFont from "../../assets/fonts/rizzfont.png";
 import Plus from "../../assets/rizzgpt/plus.svg";
 import React from "react";
+import RizzText from "@/components/RizzText";
 
-const Upload = () => {
+export default function ScreenshotListScreen() {
   const data = Array.from({ length: 15 }, (_, index) => ({
     id: index.toString(),
   }));
@@ -28,9 +28,7 @@ const Upload = () => {
           end={{ x: 0, y: 0.3 }}
         >
           <View className="mt-24 mx-8">
-            <View className="flex justify-center items-center">
-              <Image source={RizzFont} className="w-52 h-7" />
-            </View>
+            <RizzText color="#ffffff" />
             <FlatList
               data={data}
               keyExtractor={(item) => item.id}
@@ -43,19 +41,17 @@ const Upload = () => {
           </View>
         </LinearGradient>
       </ScrollView>
-      <View className="shadow-xl shadow-black">
+      <View>
         <Link
           href="/screenshot"
-          className="bg-[#00a676] rounded-full py-4 text-white text-center text-2xl font-bold px-5 my-10 mx-8 shadow-lg shadow-[#00a676]"
+          className="bg-button rounded-full py-4 text-white text-center text-2xl font-bold px-5 my-8 mx-8"
         >
           <Text>Upload Screenshot</Text>
         </Link>
       </View>
     </>
   );
-};
-
-export default Upload;
+}
 
 const Screenshot = () => {
   return (
@@ -69,3 +65,30 @@ const Screenshot = () => {
     </View>
   );
 };
+
+// const styles = StyleSheet.create({
+//   dropShadow: {
+//     shadowColor: "#00a676",
+//     shadowOpacity: 1,
+//     shadowRadius: 5,
+//     elevation: 10,
+//   },
+
+//   button: {
+//     position: "relative",
+//     backgroundColor: "#00a676",
+//     display: "flex",
+//     alignItems: "center",
+//     color: "white",
+//     justifyContent: "center",
+//     padding: 12,
+//     gap: 12,
+//     borderRadius: 8,
+//   },
+
+//   fuck: {
+//     zIndex: -1,
+//     position: "absolute",
+//     backgroundColor: "green",
+//   },
+// });
